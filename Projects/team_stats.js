@@ -26,11 +26,23 @@ const team = {
         };
         this._players.push(player);
     },
+     addGame(opp, myPts, oppPts) {
+    const game = {
+      opponent: opp,
+      teamPoints: myPts,
+      opponentPoints: oppPts
+    };
+    this._games.push(game);
+  }
 };
+
 team.addPlayer('Steph', 'Curry', 28);
 team.addPlayer('Lisa', 'Leslie', 44);
 team.addPlayer('Bugs', 'Bunny', 76);
 console.log(team._players);
+team.addGame('Titans', 100, 98);
+team.addGame('Panthers', 165, 62);
+console.log(team._games);
 
 
 
